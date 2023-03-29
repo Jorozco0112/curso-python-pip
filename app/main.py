@@ -20,7 +20,7 @@ def run():
   df = pd.read_csv("data.csv")  # Nos ahorramos el método creado read_csv.py
   df = df[df['Continent'] == 'South America']  
   # Equivalente a -> data = list(filter(lambda item : item['Continent'] == 'South America',data))
-  countries = df['Country'].values
+  countries = df['Country/Territory'].values
   # Equivalente a -> countries = list(map(lambda x: x['Country'], data))
   percentages = df['World Population Percentage'].values
   # Equivalente a -> percentages = list(map(lambda x: x['World Population Percentage'], data))
