@@ -18,7 +18,7 @@ def run():
   
   # df(dataframe) 
   df = pd.read_csv("data.csv")  # Nos ahorramos el método creado read_csv.py
-  df = df[df['Continent'] == 'South America']  
+  df = df[df['Continent'] == 'Africa']  
   # Equivalente a -> data = list(filter(lambda item : item['Continent'] == 'South America',data))
   countries = df['Country/Territory'].values
   # Equivalente a -> countries = list(map(lambda x: x['Country'], data))
@@ -37,7 +37,7 @@ def run():
     country = result[0]
     print(country)
     labels, values = utils.get_population(country)
-    charts.generate_bar_chart(country['Country'], labels, values)
+    charts.generate_bar_chart(country['Country/Territory'], labels, values)
 
 if __name__ == '__main__':
   run()
